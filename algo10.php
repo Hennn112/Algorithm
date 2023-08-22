@@ -46,9 +46,9 @@ if (isset($_POST['submit'])) {
     $dpk = $_POST['dpk'];
     $rata = ($pabp + $mtk + $dpk) / 3;
 
-    if ($rata <= 100 && $rata >= 80) {
+    if ($rata <= 100 && $rata >= 91.5) {
         echo "A";
-    } elseif ($rata < 80 && $rata >= 75) {
+    } elseif ($rata < 91.5  && $rata >= 75) {
         echo "B";
     } elseif ($rata < 75 && $rata >= 65) {
         echo "C";
@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
     } elseif ($rata < 45 && $rata >= 0) {
         echo "E";
     } else {
-        echo "ga lulus";
+        echo "tidak sesuai";
     }
 }
 

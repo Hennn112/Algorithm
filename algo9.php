@@ -30,12 +30,12 @@ $suhu_celcius;
 if (isset($_POST ['submit'])) {
     $suhu_fahrenheit = $_POST ['fahrenheit'];
 
-    $suhu_celcius = $suhu_fahrenheit / 33.8;
+    $suhu_celcius = ($suhu_fahrenheit - 32) * 5/6;
 
-    if ($suhu_celcius > 35) {
+    if ($suhu_celcius > 30) {
         echo "Panas";
-    }elseif($suhu_celcius < 25){
-        echo "Tiris";
+    }elseif($suhu_celcius > 25){
+        echo "Dingin";
     }
     else{
         echo "Normal";
