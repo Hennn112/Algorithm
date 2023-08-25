@@ -72,12 +72,12 @@
                 <tr>
                     <td>Menit</td>
                     <td>:</td>
-                    <td><input type="number" name="menit" min="0" max="59" required></td>
+                    <td><input type="number" name="menit" min="0" max="59" ></td>
                 </tr>
                 <tr>
                     <td>Detik</td>
                     <td>:</td>
-                    <td><input type="number" name="detik" min="0" max="59" required></td>
+                    <td><input type="number" name="detik" min="0" max="59" ></td>
                 </tr>
                 <tr>
                     <td colspan="3"><input type="submit" name="submit" value="Hitung"></td>
@@ -86,9 +86,9 @@
         </form>
         <?php
         if (isset($_POST['submit'])) {
-            $hh = $_POST['jam'];
-            $mm = $_POST['menit'];
-            $ss = $_POST['detik'];
+            $hh = intval($_POST['jam']);
+            $mm = intval($_POST['menit']);
+            $ss = intval($_POST['detik']);
 
             $ss = $ss + 1;
             if ($ss >= 60) {

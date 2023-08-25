@@ -14,14 +14,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            min-height: 100vhmemek;
         }
         .container {
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             padding: 20px;
-            width: 400px;
+            max-width: 400px;
             text-align: center;
         }
         h1 {
@@ -29,7 +29,7 @@
             margin-bottom: 20px;
         }
         table {
-            width: 100%;
+            max-width: 100%;
             margin-bottom: 15px;
         }
         table td {
@@ -37,7 +37,7 @@
             text-align: center;
         }
         input[type="number"] {
-            width: 60px;
+            max-width: 60px;
             padding: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -132,7 +132,7 @@ if (isset($_POST['submit'])) {
             $bulan = "Desember";
             break;
         default:
-            echo "Bulan tidak sesuai";
+            echo "Bulan tidak sesuai <br>";
             break;
     }
 
